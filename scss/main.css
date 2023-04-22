@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #f5f5f5;
+}
+
+main {
+  background-color: #25262a;
+}
+
+.header-navbar {
+  max-width: 68.75rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-navbar__logo {
+  font: bold 1em "Roboto", sans-serif;
+  color: #25262a;
+  text-shadow: 0 0 0.125rem #25262a;
+  margin-left: 2.5rem;
+}
+.header-navbar__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.3rem 0;
+}
+.header-navbar__menu a {
+  font: bold 0.8125em "Roboto", sans-serif;
+  color: #25262a;
+  margin: 0 1.25rem;
+}
+.header-navbar__menu a:hover {
+  color: #585858;
+}
+.header-navbar__menu a::before {
+  content: "- ";
+  visibility: hidden;
+}
+.header-navbar__menu a:hover::before {
+  visibility: visible;
+}
+.header-navbar__menu a::after {
+  content: " -";
+  visibility: hidden;
+}
+.header-navbar__menu a:hover::after {
+  visibility: visible;
+}
+.header-navbar__login {
+  display: flex;
+  align-items: center;
+}
+.header-navbar__login a {
+  margin-right: 2.5rem;
+}
+.header-navbar__login a i {
+  color: #25262a;
+  text-shadow: 0 0 0.0938rem #25262a;
+}
+
+.header-banner {
+  max-width: 68.75rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-banner__intro {
+  display: flex;
+  flex-direction: column;
+  width: 33rem;
+  margin-left: 2.5rem;
+}
+.header-banner__intro .btn_login {
+  color: #f5f5f5;
+  background-color: #4b4b4b;
+  padding: 0.7rem 2.2rem;
+  width: 220px;
+  text-align: center;
+  font: bold 14px "Roboto", sans-serif;
+  margin-top: 50px;
+  border-radius: 0.3rem;
+  transition: 0.5s;
+}
+.header-banner__intro .btn_login:hover {
+  color: #25262a;
+  background-color: #978a9c;
+  transition: 0.5s;
+}
+.header-banner__intro h1 {
+  font: bold 1.875em "Roboto", sans-serif;
+  color: #25262a;
+  text-shadow: 0 0 0.125rem #25262a;
+}
+.header-banner__intro h3 {
+  font: bold 1em "Roboto", sans-serif;
+  color: #585858;
+  margin-top: 0.625rem;
+}
+.header-banner__products {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5625rem;
+}
+.header-banner__products h2 {
+  width: 10rem;
+  padding: 0.25rem 0.9375rem;
+  border-radius: 0.3125rem;
+  text-align: center;
+  color: #f5f5f5;
+  background-color: #585858;
+  font: bold 0.8125em "Roboto", sans-serif;
+}
+.header-banner__products a {
+  margin-left: 25px;
+  color: rgb(149, 149, 149);
+}
+.header-banner__image {
+  margin: 4.375rem 0 3.375rem 0;
+}
+.header-banner__image img {
+  width: 15.625rem;
+}
+.header-banner__navigation {
+  display: flex;
+  flex-direction: column;
+}
+.header-banner__navigation a {
+  width: 0.5rem;
+  font-size: 0.375em;
+  margin-top: 1.5625rem;
+  border-radius: 0.625rem;
+  background-color: #585858;
+  color: #585858;
+}
+.header-banner__navigation a:hover {
+  background-color: #25262a;
+}/*# sourceMappingURL=main.css.map */
