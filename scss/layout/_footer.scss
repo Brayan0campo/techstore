@@ -1,0 +1,40 @@
+footer {
+    max-width: 68.75rem;
+    margin: 0 auto;
+    padding: 6.25rem 0;
+    font: bold .875em $font-family;
+
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+
+        .footer-content {
+            display: flex;
+
+            .footer-column {
+                margin-right: 3.125rem;
+
+                h3 {
+                    text-transform: uppercase;
+                    color: $color-bg-secondary;
+                    text-shadow: 0 0 .125rem $color-bg-secondary;
+                    margin-bottom: .75rem;
+                }
+
+                a {
+                    color: $color-bg-tertiary;
+                    transition: 0.5s;
+
+                    &:hover {
+                        color: #6a4bf1;
+                    }
+                }
+
+            }
+        }
+
+        .footer-bottom {
+            color: $color-bg-secondary;
+        }
+    }
+}

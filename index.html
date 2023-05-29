@@ -16,13 +16,13 @@
         <nav class="header-navbar">
             <a class="header-navbar__logo" href="./index.html">TECH <i class="fa-brands fa-apple"></i> STORE</a>
             <ul class="header-navbar__menu">
-                <li><a href="#">TIENDA</a></li>
+                <li><a href="/views/store.html">TIENDA</a></li>
                 <li><a href="#">NOTICIAS</a></li>
                 <li><a href="#">NOSOTROS</a></li>
             </ul>
             <div class="header-navbar__login">
-                <a href="#"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
-                <a href="#"><i class="fa-solid fa-right-to-bracket fa-lg"></i></a>
+                <a href="./views/store.html"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
+                <a href="./views/login.html"><i class="fa-solid fa-right-to-bracket fa-lg"></i></a>
             </div>
         </nav>
 
@@ -30,34 +30,105 @@
             <div class="header-banner__intro">
                 <div class="header-banner__products">
                     <h2>PRODUCTOS APPLE</h2>
-                    <a href="#"><i class="fa-solid fa-mobile-screen-button fa-lg"></i></a>
                     <a href="#"><i class="fa-solid fa-tablet-screen-button fa-lg"></i></a>
+                    <a href="#"><i class="fa-solid fa-mobile-screen-button fa-lg"></i></a>
                     <a href="#"><i class="fa-solid fa-desktop fa-lg"></i></a>
                     <a href="#"><i class="fa-solid fa-laptop fa-lg"></i></a>
                     <a href="#"><i class="fa-solid fa-headphones fa-lg"></i></a>
                 </div>
                 <h1>VIVE LA EXPERIENCIA APPLE EN NUESTRA TIENDA DE TECNOLOGÍA.</h1>
                 <h3>Todo lo que necesitas para tu mundo Apple, en un solo lugar.</h3>
-                <a href="./views/login.html" class="btn_login">REGÍSTRATE</a>
+                <a href="./views/store.html" class="btn_explore">EXPLORA NUESTRA TIENDA &nbsp;&nbsp;<i class="fa-solid fa-store"></i></a>
             </div>
             <div class="header-banner__image">
-                <img src="./assets/images/index/img_bannerIndex.png" alt="">
-            </div>
-            <div class="header-banner__navigation">
-                <a href="#">.</a>
-                <a href="#">.</a>
-                <a href="#">.</a>
+                <img id="img-banner" src="./assets/images/index/img_bannerIndex.png" alt="">
             </div>
         </section>
     </header>
 
     <main>
+        <section class="section-products">
+            <h2>NUESTROS PRODUCTOS</h2>
+            <div class="products-content">
+                <div class="products-content__container">
+                    <img id="img-one" src="./assets/images/index/img_product1.png" alt="Imagen producto 1">
+                    <div class="products-left">
+                        <h3><i class="fa-solid fa-mobile-screen-button fa-sm"></i> iPhone</h3>
+                        <a href="#" class="btn_info">Explorar</a>
+                    </div>
+                </div>
 
+                <div class="products-content__container">
+                    <div class="products-right">
+                        <h3><i class="fa-solid fa-laptop fa-sm"></i> Mac</h3>
+                        <a href="#" class="btn_info">Explorar</a>
+                    </div>
+                    <img id="img-two" src="./assets/images/index/img_product2.png" alt="Imagen producto 1">
+                </div>
+
+                <div class="products-content__container">
+                    <img id="img-three" src="./assets/images/index/img_product3.png" alt="Imagen producto 1">
+                    <div class="products-left">
+                        <h3><i class="fa-solid fa-tablet-screen-button fa-sm"></i> iPad</h3>
+                        <a href="#" class="btn_info">Explorar</a>
+                    </div>
+                </div>
+
+                <div class="products-content__container">
+                    <div class="products-right">
+                        <h3><i class="fa-brands fa-apple"></i> Watch</h3>
+                        <a href="#" class="btn_info">Explorar</a>
+                    </div>
+                    <img id="img-four" src="./assets/images/index/img_product4.png" alt="Imagen producto 1">
+                </div>
+            </div>
+            <div class="others-products">
+                <div class="product-five">
+                    <h3>Otros productos y accesorios</h3>
+                    <a href="#" class="btn_info">Explorar</a>
+                </div>
+                <img id="img-five" src="./assets/images/index/img_product5.png" alt="Imagen producto 1">
+                <img id="img-six" src="./assets/images/index/img_product6.png" alt="Imagen producto 1">
+            </div>
+        </section>
     </main>
 
     <footer>
-
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Productos</h3>
+                    <ul>
+                        <li><a href="#">iPhone</a></li>
+                        <li><a href="#">iPad</a></li>
+                        <li><a href="#">MacBook</a></li>
+                        <li><a href="#">Apple Watch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#">Soporte técnico</a></li>
+                        <li><a href="#">Garantía</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Información</h3>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Tech <i class="fa-brands fa-apple"></i> Store. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
