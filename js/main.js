@@ -23,91 +23,91 @@ const products = [
     {
         name: "MacBook Pro M2",
         price: 13399000,
-        image: "/assets/images/store/img_product9.png",
+        image: "../assets/images/store/img_product9.png",
         category: "mac"
     },
     {
         name: "MacBook Pro",
         price: 8099000,
-        image: "/assets/images/store/img_product10.png",
+        image: "../assets/images/store/img_product10.png",
         category: "mac"
     },
     {
         name: "MacBook Air",
         price: 4799000,
-        image: "/assets/images/store/img_product11.png",
+        image: "../assets/images/store/img_product11.png",
         category: "mac"
     },
     {
         name: "iPhone 14 Pro",
         price: 6249000,
-        image: "/assets/images/store/img_product1.png",
+        image: "../assets/images/store/img_product1.png",
         category: "iphone"
     },
     {
         name: "iPhone 14",
         price: 5569000,
-        image: "/assets/images/store/img_product2.png",
+        image: "../assets/images/store/img_product2.png",
         category: "iphone"
     },
     {
         name: "iPhone 13 Pro",
         price: 5099000,
-        image: "/assets/images/store/img_product3.png",
+        image: "../assets/images/store/img_product3.png",
         category: "iphone"
     },
     {
         name: "iPhone 12",
         price: 3669000,
-        image: "/assets/images/store/img_product4.png",
+        image: "../assets/images/store/img_product4.png",
         category: "iphone"
     },
     {
         name: "iPhone 11",
         price: 2399000,
-        image: "/assets/images/store/img_product5.png",
+        image: "../assets/images/store/img_product5.png",
         category: "iphone"
     },
     {
         name: "iPad Pro",
         price: 5749000,
-        image: "/assets/images/store/img_product6.png",
+        image: "../assets/images/store/img_product6.png",
         category: "ipad"
     },
     {
         name: "iPad Air",
         price: 3399000,
-        image: "/assets/images/store/img_product7.png",
+        image: "../assets/images/store/img_product7.png",
         category: "ipad"
     },
     {
         name: "iPad",
         price: 1839000,
-        image: "/assets/images/store/img_product13.png",
+        image: "../assets/images/store/img_product13.png",
         category: "ipad"
     },
     {
         name: "iPad mini",
         price: 3099000,
-        image: "/assets/images/store/img_product8.png",
+        image: "../assets/images/store/img_product8.png",
         category: "ipad"
     },
     {
         name: "Apple Watch Series 8",
         price: 2399000,
-        image: "/assets/images/store/img_product14.png",
+        image: "../assets/images/store/img_product14.png",
         category: "applewatch"
     },
     {
         name: "Apple Watch SE",
         price: 1499000,
-        image: "/assets/images/store/img_product15.png",
+        image: "../assets/images/store/img_product15.png",
         category: "applewatch"
     },
     {
         name: "Apple Watch Series 7",
         price: 1699000,
-        image: "/assets/images/store/img_product16.png",
+        image: "../assets/images/store/img_product16.png",
         category: "applewatch"
     }
 ];
