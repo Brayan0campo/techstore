@@ -262,7 +262,7 @@ main {
   box-shadow: 0 5px 15px 0 rgba(56, 56, 56, 0.37);
   color: #f7f7f7;
   padding: 0.6rem 2rem;
-  font: bold 14px "Roboto", sans-serif;
+  font: bold 0.875em "Roboto", sans-serif;
   border-radius: 0.3rem;
   transition: 0.5s;
 }
@@ -276,19 +276,81 @@ main {
      object-fit: cover;
 }
 
+#notification {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font: bold 0.875em "Roboto", sans-serif;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#notification.show {
+  opacity: 1;
+}
+
 .cart {
   max-width: 68.75rem;
   margin: 0 auto;
+  margin-top: 4.375rem;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
+.cart .cart-container {
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0.3125rem 0.9375rem 0 rgba(56, 56, 56, 0.37);
+}
+.cart h2 {
+  font: bold 1.1875rem "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: #25262a;
+  text-shadow: 0 0 0.125rem #25262a;
+  margin: 3.125rem;
+}
+.cart p {
+  font: bold 1.125rem "Roboto", sans-serif;
+  margin-top: 3.125rem;
+  margin-bottom: 1.25rem;
 }
 .cart .cart-items {
   list-style-type: none;
   padding: 0;
 }
 .cart .cart-items li {
-  margin-bottom: 10px;
+  margin-bottom: 1.25rem;
+  margin-right: 2.5rem;
+  font: bold 1rem "Roboto", sans-serif;
+  text-align: end;
+}
+.cart .cart-items li button {
+  background-color: brown;
+  color: #f7f7f7;
+  margin-left: 25px;
+  padding: 5px 10px;
+  font: bold 0.75rem "Roboto", sans-serif;
+  cursor: pointer;
+  border-radius: 0.2rem;
 }
 .cart .checkout-btn {
-  margin-top: 10px;
+  background-color: #25262a;
+  box-shadow: 0 5px 15px 0 rgba(56, 56, 56, 0.37);
+  color: #f7f7f7;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 0.6rem 2rem;
+  font: bold 14px "Roboto", sans-serif;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  transition: 0.5s;
+}
+.cart .checkout-btn:hover {
+  background-color: #6a4bf1;
 }
 
 /* Estilos para el popup */
@@ -306,6 +368,7 @@ main {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s linear 0.25s, opacity 0.25s;
+  text-align: center;
 }
 .popup-container .popup {
   background-color: #fff;
@@ -321,10 +384,12 @@ main {
   font: bold 14px "Roboto", sans-serif;
 }
 .popup-container .popup .purchase-info p {
-  margin-bottom: 10px;
+  margin: 20px;
+  font: bold 16px "Roboto", sans-serif;
 }
 .popup-container .popup .purchase-info ul {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+  text-align: end;
 }
 .popup-container .popup button {
   background-color: #25262a;
@@ -388,11 +453,10 @@ main {
   text-shadow: 0 0 0.125rem #25262a;
   box-shadow: 0 0.3125rem 0.9375rem 0 rgba(56, 56, 56, 0.37);
   transition: transform 0.3s ease;
-  cursor: pointer;
   margin-bottom: 20px;
 }
 .products .product-grid .product:hover {
-  transform: scale(1.08);
+  transform: scale(1.04);
 }
 .products .product-grid .product .custom-button {
   background-color: #25262a;
@@ -409,8 +473,8 @@ main {
   background-color: #6a4bf1;
 }
 .products .product-grid .product img {
-  width: 130px;
-  margin: 20px;
+  width: 8.125rem;
+  margin: 1.25rem;
 }
 
 footer {

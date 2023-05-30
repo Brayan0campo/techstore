@@ -141,7 +141,7 @@
             box-shadow: 0 5px 15px 0 rgba(56, 56, 56, 0.37);
             color: $color-bg-primary;
             padding: 0.6rem 2rem;
-            font: bold 14px $font-family;
+            font: bold .875em $font-family;
             border-radius: 0.3rem;
             transition: 0.5s;
 
@@ -159,21 +159,88 @@
     }
 }
 
+#notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font: bold .875em $font-family;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#notification.show {
+    opacity: 1;
+}
+
 .cart {
     max-width: 68.75rem;
     margin: 0 auto;
+    margin-top: 4.375rem;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+
+    .cart-container {
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 .3125rem .9375rem 0 rgba(56, 56, 56, 0.37);
+    }
+
+    h2 {
+        font: bold 1.1875rem $font-family;
+        text-transform: uppercase;
+        color: $color-bg-secondary;
+        text-shadow: 0 0 .125rem $color-bg-secondary;
+        margin: 3.125rem;
+    }
+
+    p {
+        font: bold 1.125rem $font-family;
+        margin-top: 3.125rem;
+        margin-bottom: 1.25rem;
+    }
 
     .cart-items {
         list-style-type: none;
         padding: 0;
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 1.25rem;
+            margin-right: 2.5rem;
+            font: bold 1rem $font-family;
+            text-align: end;
+
+            button {
+                background-color: brown;
+                color: $color-bg-primary;
+                margin-left: 25px;
+                padding: 5px 10px;
+                font: bold .75rem $font-family;
+                cursor: pointer;
+                border-radius: 0.2rem;
+            }
         }
     }
 
     .checkout-btn {
-        margin-top: 10px;
+        background-color: $color-bg-secondary;
+        box-shadow: 0 5px 15px 0 rgba(56, 56, 56, 0.37);
+        color: $color-bg-primary;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        padding: 0.6rem 2rem;
+        font: bold 14px $font-family;
+        cursor: pointer;
+        border-radius: 0.3rem;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: #6a4bf1;
+        }
     }
 }
 
@@ -192,6 +259,7 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s linear 0.25s, opacity 0.25s;
+    text-align: center;
 
     .popup {
         background-color: #fff;
@@ -208,11 +276,13 @@
             font: bold 14px $font-family;
 
             p {
-                margin-bottom: 10px;
+                margin: 20px;
+                font: bold 16px $font-family;
             }
 
             ul {
-                margin-bottom: 10px;
+                margin-bottom: .625rem;
+                text-align: end;
             }
         }
 
@@ -286,11 +356,10 @@
             text-shadow: 0 0 .125rem $color-bg-secondary;
             box-shadow: 0 .3125rem .9375rem 0 rgba(56, 56, 56, 0.37);
             transition: transform 0.3s ease;
-            cursor: pointer;
             margin-bottom: 20px;
 
             &:hover {
-                transform: scale(1.08);
+                transform: scale(1.04);
             }
 
             .custom-button {
@@ -310,8 +379,8 @@
             }
 
             img {
-                width: 130px;
-                margin: 20px;
+                width: 8.125rem;
+                margin: 1.25rem;
             }
         }
     }

@@ -1,3 +1,24 @@
+// Sección para animaciones de pagina
+var element = document.querySelector('.products-content');
+var windowHeight = window.innerHeight;
+var isVisible = false;
+
+function checkVisibility() {
+    var position = element.getBoundingClientRect().top;
+
+    if (position - windowHeight <= 0 && !isVisible) {
+        element.classList.add('show');
+        element.classList.remove('hide');
+        isVisible = true;
+    } else if (position > windowHeight && isVisible) {
+        element.classList.add('hide');
+        element.classList.remove('show');
+        isVisible = false;
+    }
+}
+
+window.addEventListener('scroll', checkVisibility);
+
 // Lista de productos
 const products = [
     {
@@ -143,10 +164,24 @@ function generateProductHTML(product) {
     return productHTML;
 }
 
+//  Mostrar en pantalla producto agregado
+function showNotification(message) {
+    const notificationContainer = document.getElementById('notification');
+    notificationContainer.textContent = message;
+    notificationContainer.classList.add('show');
+
+    setTimeout(() => {
+        notificationContainer.textContent = '';
+        notificationContainer.classList.remove('show');
+    }, 3000);
+}
+
 // Agregar un producto al carrito
 function addToCart(product) {
     cart.push(product);
     updateCart();
+    localStorage.setItem('cart', JSON.stringify(cart));
+    showNotification(`${product.name} ha sido agregado al carrito`);
 }
 
 // Eliminar producto del carrito
@@ -214,6 +249,15 @@ function closePopup() {
 
 closePopupBtn.addEventListener('click', closePopup);
 
+// Mantener datos del localStorage al cargar pagina
+document.addEventListener('DOMContentLoaded', () => {
+    let storedCart = localStorage.getItem('cart');
+    if (storedCart) {
+        cart = JSON.parse(storedCart);
+        updateCart();
+    }
+});
+
 renderProducts();
 
 // Sección para filtrado de productos
@@ -246,24 +290,3 @@ filterButtons.forEach(button => {
         }
     });
 });
-
-// Sección para animaciones
-var element = document.querySelector('.products-content');
-var windowHeight = window.innerHeight;
-var isVisible = false;
-
-function checkVisibility() {
-    var position = element.getBoundingClientRect().top;
-
-    if (position - windowHeight <= 0 && !isVisible) {
-        element.classList.add('show');
-        element.classList.remove('hide');
-        isVisible = true;
-    } else if (position > windowHeight && isVisible) {
-        element.classList.add('hide');
-        element.classList.remove('show');
-        isVisible = false;
-    }
-}
-
-window.addEventListener('scroll', checkVisibility);
