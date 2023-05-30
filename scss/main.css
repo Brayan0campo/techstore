@@ -270,6 +270,149 @@ main {
   background-color: #6a4bf1;
 }
 
+.header-banner_store img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cart {
+  max-width: 68.75rem;
+  margin: 0 auto;
+}
+.cart .cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+.cart .cart-items li {
+  margin-bottom: 10px;
+}
+.cart .checkout-btn {
+  margin-top: 10px;
+}
+
+/* Estilos para el popup */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.25s, opacity 0.25s;
+}
+.popup-container .popup {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+}
+.popup-container .popup h3 {
+  font: bold 1.25rem "Roboto", sans-serif;
+  color: #6a4bf1;
+  margin-bottom: 20px;
+}
+.popup-container .popup .purchase-info {
+  font: bold 14px "Roboto", sans-serif;
+}
+.popup-container .popup .purchase-info p {
+  margin-bottom: 10px;
+}
+.popup-container .popup .purchase-info ul {
+  margin-bottom: 10px;
+}
+.popup-container .popup button {
+  background-color: #25262a;
+  box-shadow: 0 5px 15px 0 rgba(56, 56, 56, 0.37);
+  color: #f7f7f7;
+  margin-top: 20px;
+  padding: 0.6rem 2rem;
+  font: bold 14px "Roboto", sans-serif;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  transition: 0.5s;
+}
+.popup-container .popup button:hover {
+  background-color: #6a4bf1;
+}
+
+#popup.show {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.products {
+  max-width: 68.75rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.products h2 {
+  font: bold 1.5em "Roboto", sans-serif;
+  color: #25262a;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.125rem #25262a;
+  padding: 3.125rem 0;
+}
+.products .filter {
+  margin-bottom: 2.5rem;
+}
+.products .filter .filter-btn {
+  display: inline-block;
+  margin-right: 0.625rem;
+  padding: 0.3125rem 0.625rem;
+  background-color: #dddddd;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  font: bold 0.9em "Roboto", sans-serif;
+}
+.products .filter .filter-btn.active {
+  color: #f7f7f7;
+  background-color: #6a4bf1;
+}
+.products .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  grid-gap: 1.25rem;
+}
+.products .product-grid .product {
+  padding: 1.25rem;
+  background: #FFFFFF;
+  border-radius: 0.3125rem;
+  text-shadow: 0 0 0.125rem #25262a;
+  box-shadow: 0 0.3125rem 0.9375rem 0 rgba(56, 56, 56, 0.37);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.products .product-grid .product:hover {
+  transform: scale(1.08);
+}
+.products .product-grid .product .custom-button {
+  background-color: #25262a;
+  box-shadow: 0 5px 15px 0 rgba(56, 56, 56, 0.37);
+  color: #f7f7f7;
+  padding: 0.6rem 2rem;
+  margin: 25px 0 20px 0;
+  font: bold 14px "Roboto", sans-serif;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  transition: 0.5s;
+}
+.products .product-grid .product .custom-button:hover {
+  background-color: #6a4bf1;
+}
+.products .product-grid .product img {
+  width: 130px;
+  margin: 20px;
+}
+
 footer {
   max-width: 68.75rem;
   margin: 0 auto;

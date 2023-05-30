@@ -25,16 +25,84 @@
                 <a href="../views/login.html"><i class="fa-solid fa-right-to-bracket fa-lg"></i></a>
             </div>
         </nav>
+
+        <section class="header-banner_store">
+            <img src="../assets/images/store/imgBanner_Store.jpg" alt="">
+        </section>
     </header>
 
     <main>
+        <section class="products">
+            <h2>Comprar Productos</h2>
+            <div class="filter">
+                <button class="filter-btn active" data-category="all">Todos</button>
+                <button class="filter-btn" data-category="mac">Mac</button>
+                <button class="filter-btn" data-category="iphone">iPhone</button>
+                <button class="filter-btn" data-category="ipad">iPad</button>
+                <button class="filter-btn" data-category="applewatch">Apple Watch</button>
+            </div>
+            <div class="product-grid">
 
+            </div>
+        </section>
 
+        <section class="cart">
+            <h2>Carrito de compras</h2>
+            <ul class="cart-items">
+            </ul>
+            <p class="cart-total">Total: $<span class="total-amount">0</span></p>
+            <button class="checkout-btn">Checkout</button>
+        </section>
+
+        <div class="popup-container" id="popup">
+            <div class="popup">
+                <h3>¡Gracias por tu compra!</h3>
+                <div class="purchase-info">
+                    <p>Pedido procesado exitosamente</p>
+                    <ul id="purchase-items"></ul>
+                    <p class="purchase-total">Total: $<span id="purchase-total"></span></p>
+                </div>
+                <button id="close-popup">Cerrar</button>
+            </div>
+        </div>
     </main>
 
     <footer>
-
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Productos</h3>
+                    <ul>
+                        <li><a href="#">iPhone</a></li>
+                        <li><a href="#">iPad</a></li>
+                        <li><a href="#">MacBook</a></li>
+                        <li><a href="#">Apple Watch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#">Soporte técnico</a></li>
+                        <li><a href="#">Garantía</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Información</h3>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Tech <i class="fa-brands fa-apple"></i> Store. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
