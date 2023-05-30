@@ -1,24 +1,4 @@
-var element = document.querySelector('.products-content');
-var windowHeight = window.innerHeight;
-var isVisible = false;
-
-function checkVisibility() {
-    var position = element.getBoundingClientRect().top;
-
-    if (position - windowHeight <= 0 && !isVisible) {
-        element.classList.add('show');
-        element.classList.remove('hide');
-        isVisible = true;
-    } else if (position > windowHeight && isVisible) {
-        element.classList.add('hide');
-        element.classList.remove('show');
-        isVisible = false;
-    }
-}
-
-window.addEventListener('scroll', checkVisibility);
-
-
+// Lista de productos
 const products = [
     {
         name: "MacBook Pro M2",
@@ -112,12 +92,13 @@ const products = [
     }
 ];
 
+// Obtener elementos del DOM
 const productGrid = document.querySelector('.product-grid');
 const cartItems = document.querySelector('.cart-items');
 const totalAmount = document.querySelector('.total-amount');
 const checkoutBtn = document.querySelector('.checkout-btn');
 
-// Inicializar carrito desde localStorage o crear uno nuevo
+// Inicializar carrito desde localStorage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Renderizar los productos en el grid
@@ -129,6 +110,7 @@ function renderProducts() {
     });
 }
 
+// Generar el HTML para un producto
 function generateProductHTML(product) {
     const productHTML = document.createElement('div');
     productHTML.classList.add('product', product.category);
@@ -161,7 +143,7 @@ function generateProductHTML(product) {
     return productHTML;
 }
 
-// Agregar producto al carrito
+// Agregar un producto al carrito
 function addToCart(product) {
     cart.push(product);
     updateCart();
@@ -181,12 +163,13 @@ function updateCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
+// Obtener elementos del DOM para el popup
 const popupContainer = document.getElementById('popup');
 const closePopupBtn = document.getElementById('close-popup');
 const purchaseItems = document.getElementById('purchase-items');
 const purchaseTotal = document.getElementById('purchase-total');
 
-// Evento del botón de checkout
+// Evento del botón de compra
 checkoutBtn.addEventListener('click', () => {
     if (cart.length > 0) {
         showPurchaseInfo();
@@ -209,33 +192,31 @@ function showPurchaseInfo() {
     showPopup();
 }
 
-// Mostrar el popup
 function showPopup() {
     popupContainer.classList.add('show');
 }
 
-// Cerrar el popup
 function closePopup() {
     popupContainer.classList.remove('show');
 }
 
-// Evento del botón de cerrar el popup
 closePopupBtn.addEventListener('click', closePopup);
 
 renderProducts();
 
-//------------------------------------------------------------
-
+// Sección para filtrado de productos
 const filterButtons = document.querySelectorAll('.filter-btn');
 const productsGrid = document.querySelector('.product-grid');
 const allProducts = productsGrid.querySelectorAll('.product');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
+
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
 
         const category = button.dataset.category;
+
         if (category === 'all') {
             productsGrid.classList.remove('filtered');
             allProducts.forEach(product => {
@@ -253,3 +234,24 @@ filterButtons.forEach(button => {
         }
     });
 });
+
+// Sección para animaciones
+var element = document.querySelector('.products-content');
+var windowHeight = window.innerHeight;
+var isVisible = false;
+
+function checkVisibility() {
+    var position = element.getBoundingClientRect().top;
+
+    if (position - windowHeight <= 0 && !isVisible) {
+        element.classList.add('show');
+        element.classList.remove('hide');
+        isVisible = true;
+    } else if (position > windowHeight && isVisible) {
+        element.classList.add('hide');
+        element.classList.remove('show');
+        isVisible = false;
+    }
+}
+
+window.addEventListener('scroll', checkVisibility);
