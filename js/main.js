@@ -188,6 +188,7 @@ function addToCart(product) {
 function removeFromCart(index) {
     cart.splice(index, 1);
     updateCart();
+    showNotification('Producto eliminado del carrito');
 }
 
 // Actualizar el carrito y el localStorage
