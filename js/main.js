@@ -104,10 +104,10 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 // Renderizar los productos en el grid
 function renderProducts() {
     productGrid.innerHTML = '';
-    products.forEach(product => {
-        const productHTML = generateProductHTML(product);
+    for (let i = 0; i < products.length; i++) {
+        const productHTML = generateProductHTML(products[i]);
         productGrid.appendChild(productHTML);
-    });
+    }
 }
 
 // Generar el HTML para un producto
@@ -149,13 +149,25 @@ function addToCart(product) {
     updateCart();
 }
 
+// Eliminar producto del carrito
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCart();
+}
+
 // Actualizar el carrito y el localStorage
 function updateCart() {
     cartItems.innerHTML = '';
     let totalPrice = 0;
-    cart.forEach(item => {
+    cart.forEach((item, index) => {
         const cartItem = document.createElement('li');
         cartItem.textContent = item.name;
+
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Eliminar';
+        removeButton.addEventListener('click', () => removeFromCart(index));
+        cartItem.appendChild(removeButton);
+
         cartItems.appendChild(cartItem);
         totalPrice += item.price;
     });
