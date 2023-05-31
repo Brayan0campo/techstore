@@ -1,10 +1,10 @@
 // Sección para animaciones de pagina
-var element = document.querySelector('.products-content');
-var windowHeight = window.innerHeight;
-var isVisible = false;
+const element = document.querySelector('.products-content');
+const windowHeight = window.innerHeight;
+let isVisible = false;
 
 function checkVisibility() {
-    var position = element.getBoundingClientRect().top;
+    const position = element.getBoundingClientRect().top;
 
     if (position - windowHeight <= 0 && !isVisible) {
         element.classList.add('show');
