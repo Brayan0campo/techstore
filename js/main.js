@@ -6,7 +6,7 @@ const checkoutBtn = document.querySelector('.checkout-btn');
 
 // Inicializar carrito desde localStorage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
-const productsJson = "/json/products.json";
+const productsJson = "../json/products.json";
 
 // Renderizar los productos en el grid (fetch)
 function renderProducts() {
