@@ -128,21 +128,9 @@ main {
 .header-banner__image #img-banner {
   display: block;
   width: 13rem;
-  position: relative;
   left: 100%;
-  animation: aparecer 1.1s ease-in-out forwards;
 }
 
-@keyframes aparecer {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(-100%);
-  }
-}
 .section-products {
   max-width: 68.75rem;
   margin: 0 auto;
@@ -160,9 +148,6 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3.125rem;
-  opacity: 0;
-  transform: translateY(10%);
-  transition: opacity 1.1s ease-in-out, transform 1.1s ease-in-out;
 }
 .section-products .products-content__container {
   display: flex;
@@ -276,23 +261,6 @@ main {
      object-fit: cover;
 }
 
-#notification {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  font: bold 0.875em "Roboto", sans-serif;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 4px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-#notification.show {
-  opacity: 1;
-}
-
 .cart {
   max-width: 68.75rem;
   margin: 0 auto;
@@ -351,65 +319,6 @@ main {
 }
 .cart .checkout-btn:hover {
   background-color: #6a4bf1;
-}
-
-/* Estilos para el popup */
-.popup-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s linear 0.25s, opacity 0.25s;
-  text-align: center;
-}
-.popup-container .popup {
-  background-color: #fff;
-  padding: 25px;
-  border-radius: 8px;
-}
-.popup-container .popup h3 {
-  font: bold 1.25rem "Roboto", sans-serif;
-  color: #6a4bf1;
-  margin-bottom: 20px;
-}
-.popup-container .popup .purchase-info {
-  font: bold 14px "Roboto", sans-serif;
-}
-.popup-container .popup .purchase-info p {
-  margin: 20px;
-  font: bold 16px "Roboto", sans-serif;
-}
-.popup-container .popup .purchase-info ul {
-  margin-bottom: 0.625rem;
-  text-align: end;
-}
-.popup-container .popup button {
-  background-color: #25262a;
-  box-shadow: 0 5px 15px 0 rgba(56, 56, 56, 0.37);
-  color: #f7f7f7;
-  margin-top: 20px;
-  padding: 0.6rem 2rem;
-  font: bold 14px "Roboto", sans-serif;
-  cursor: pointer;
-  border-radius: 0.3rem;
-  transition: 0.5s;
-}
-.popup-container .popup button:hover {
-  background-color: #6a4bf1;
-}
-
-#popup.show {
-  visibility: visible;
-  opacity: 1;
-  transition-delay: 0s;
 }
 
 .products {
